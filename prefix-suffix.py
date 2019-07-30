@@ -1,24 +1,15 @@
 '''
 
-Ques 2: Given a string of brackets (, ), {, }, [, ], find the position in the string where the orders of brackets breaks.
+Ques 1: Given a string, find the longest length of a prefix which is also a suffix.
 
-I/p: ())
-
-O/p: 3
-
-I/p: (){[]}(
-
-O/p: 8
-
-https://www.geeksforgeeks.org/check-for-balanced-parentheses-in-an-expression/
-
+https://www.geeksforgeeks.org/longest-prefix-also-suffix/
 '''
 
-a = "abcab"
+a = "cdcdcdc"
 i = 1
 j = len(a)-1
 count = 0
-while(i < j):
+while(i < len(a) and j >= 0):
     print(a[0:i],a[j:])
     if(a[0:i] == a[j:]):
         count = i
